@@ -1,0 +1,58 @@
+body{
+    margin:10%;
+    background-image: url(JavaScript.jpeg);
+    background-repeat: repeat;
+    background-size: cover;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.card1{
+    padding: 10px;
+    background-color:#fff;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.card4{
+    padding: 10px;
+    background-color:#b8e31a;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.card5{
+    padding: 10px;
+    background-color:#b254b7;;
+    font-size: 20px;
+    border-radius: 8px;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+}
+button{
+    width: 30%;
+    height: 40%;
+    font-size: medium;
+    color: #fff;
+    background-color: rgb(19, 33, 230);
+    border-radius: 8dvh;
+}
+input{
+    margin: 2%;
+    width: 200px;
+    background-color: rgb(210, 120, 107);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    height: 3vh;
+}
+.exercice2{
+    padding: 10px;
+    background-color:#b68686;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.sec:hover{
+    background-color: rgb(165, 154, 126);
+    border: 1 solid rgb(165, 154, 126);
+}
