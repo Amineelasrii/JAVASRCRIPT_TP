@@ -1,62 +1,42 @@
 
-// Example 1: Programme de temperature en c°
+// Example 1:
 function exx0() {
-    var tempF = document.getElementById("exercice1").value;
-    let tempC = (5 / 9) * (tempF - 32);
-
-    console.log(tempC + " C°");
-    document.getElementById("exer").innerHTML = tempC + " C°";
-}
-
-// Example 2: Programme de conversion de durées
-function exx2(){
-    var secc = (document.getElementById("sec").value)
-    
-    
-    var jours = Math.floor(secc / 86400)
-    var heurs = Math.floor((secc % 86400) / 3600)
-    var min = Math.floor((secc % 3600) / 60)
-    var secend = secc % 60
-
-    document.getElementById("j").value = jours
-    document.getElementById("h").value = heurs
-    document.getElementById("m").value = min
-    document.getElementById("s").value = secend 
-}
-
-
-// Exercise PYRAMIDE
-function exx3(){
-    var N = document.getElementById("pyramid").value;
-    var output = ''; 
-
-    for (i = 1; i <= N; i++) {
-        var up = "";
-
-        for (j = 1; j <= i; j++) {
-            up += "*";
-        }
-
-        output += up + "<br>";
+    let num = document.getElementById("exercice1").value;
+    let reversed = 0;
+    while (num > 0) {
+        const digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num = Math.floor(num / 10);
     }
-
-    document.getElementById("pyr").innerHTML = output; 
+    document.getElementById("exer").innerText = "Reverse: " + reversed;
 }
 
-// Exercise PYRAMIDE2
+
+// Example 2: 
+function exx2() {
+    var str = document.getElementById("sec").value;
+    var ft = str.split('').sort().join('');
+    document.getElementById("c").value = ft;
+}
+
+
+// Exercise 3:
+function exx3() {
+    var str = document.getElementById("chainee").value;
+    var output = str.split(' ').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
+    document.getElementById("pyr").innerHTML = output;
+}
+
+
+// Exercise 4:
 function exx4() {
-    var n = document.getElementById("pyrami").value;
-    var pyramide = '';
-    for (var i = n; i >= 1; i--) {
-        var ligne = '';
-        for (var j = 0; j < n - i; j++) {
-            ligne += '&nbsp;';
+    var str = document.getElementById("chain").value;
+    const words = str.split(' ');
+    let longestWord = "";
+    for (const word of words) {
+        if (word.length) {
+            longestWord = word;
         }
-
-        for (var k = 0; k < 2 * i - 1; k++) {
-            ligne += '*';
-        }
-        pyramide += ligne + "<br>";
     }
-    document.getElementById("pyra").innerHTML = pyramide;
+    document.getElementById("longestWord").innerHTML = longestWord;
 }
